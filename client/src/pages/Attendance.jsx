@@ -11,7 +11,7 @@ const Attendance = () => {
   const [isDeleted, setIsDeleted] = useState(false)
   const [loading, setLoading] = useState(true)
 
-  const fetchData = useCallback(async (params) => {
+  const fetchData = useCallback(async () => {
      setHistory(dummyAttendanceData)
      setTimeout(()=>{
       setLoading(false)      
