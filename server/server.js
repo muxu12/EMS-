@@ -9,6 +9,7 @@ import profileRouter from './Routes/profileRoutes.js';
 import attendanceRouter from './Routes/attendanceRoutes.js';
 import leaveRoutes from './Routes/leaveRoutes.js';
 import payslipRoute from './Routes/paysliproute.js';
+import dashboardRouter from './Routes/dashboardroutes.js';
 
 const app = express()
 
@@ -32,6 +33,8 @@ app.use('/api/profile', profileRouter)
 app.use('/api/attendance', attendanceRouter)
 app.use('/api/leave', leaveRoutes)
 app.use('/api/payslips', payslipRoute)
+app.use('/api/dashboard', dashboardRouter)
+
 
 await connectDb()
 app.listen(PORT, ()=>console.log(`server is listening on port ${PORT}`)
